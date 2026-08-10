@@ -1,0 +1,75 @@
+@startuml usecase_diagram
+skinparam backgroundColor #FFFFFF
+skinparam handwritten false
+skinparam monochrome false
+skinparam shadowing true
+
+skinparam actor {
+    BorderColor #1A365D
+    BackgroundColor #E2E8F0
+    FontColor #1A365D
+    FontSize 14
+    FontStyle bold
+}
+
+skinparam usecase {
+    BorderColor #2B6CB0
+    BackgroundColor #EBF8FF
+    FontColor #1A365D
+    FontSize 13
+    ArrowColor #2B6CB0
+}
+
+skinparam rectangle {
+    BorderColor #4A5568
+    FontColor #1A365D
+    FontSize 16
+    FontStyle bold
+}
+
+title "Diagram Use Case - Sistem Informasi Manajemen Laporan Gangguan (BRS NET)"
+
+left to right direction
+
+actor "Pelanggan\n(Customer)" as Pelanggan
+actor "Admin / Helpdesk\n(Back-office)" as Admin
+actor "Teknisi Lapangan\n(Field Technician)" as Teknisi
+
+rectangle "Sistem Pelaporan Gangguan BRS NET (Laravel & Filament)" {
+    
+    usecase "Mengisi Form Laporan Gangguan" as UC1
+    usecase "Membagikan Lokasi GPS\n(Geolocation & Akurasi)" as UC2
+    usecase "Melacak Status Perbaikan Tiket\n(Search Kode Tiket)" as UC3
+
+    usecase "Login & Autentikasi Sistem" as UC4
+    usecase "Mengelola Laporan / Tiket Gangguan\n(CRUD & Filter Tiket)" as UC5
+    usecase "Memperbarui Status Penanganan\n(Pending -> Proses -> Selesai)" as UC6
+    usecase "Melihat & Navigasi Lokasi Pelanggan\n(Google Maps Integration)" as UC7
+    usecase "Mengelola Master Jenis Keluhan\n(CRUD Keluhan)" as UC8
+    usecase "Mengelola Master Status\n(CRUD Status)" as UC9
+    usecase "Mengelola Akun Pengguna\n(User Management)" as UC10
+}
+
+Pelanggan --> UC1
+Pelanggan --> UC3
+UC1 ..> UC2 : <<extend>>
+note right of UC2
+  Muncul konfirmasi jika
+  lokasi GPS tidak dibagikan
+end note
+
+Admin --> UC4
+Admin --> UC5
+Admin --> UC8
+Admin --> UC9
+Admin --> UC10
+
+UC5 ..> UC6 : <<include>>
+UC5 ..> UC7 : <<include>>
+
+Teknisi --> UC4
+Teknisi --> UC5
+Teknisi --> UC6
+Teknisi --> UC7
+
+@enduml

@@ -1,1 +1,6 @@
-db
+LaporanGangguanBRS/db/data/
+LaporanGangguanBRS/db_slave1/data/
+LaporanGangguanBRS/db_slave2/data/
+LaporanGangguanBRS/.env
+.DS_Store
+*.log

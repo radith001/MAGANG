@@ -1,0 +1,70 @@
+@startuml activity_diagram_pelaporan
+skinparam backgroundColor #FFFFFF
+skinparam handwritten false
+skinparam monochrome false
+skinparam shadowing true
+
+skinparam activity {
+    BorderColor #2B6CB0
+    BackgroundColor #EBF8FF
+    FontColor #1A365D
+    FontSize 13
+    ArrowColor #2B6CB0
+}
+
+skinparam activityDiamond {
+    BorderColor #D69E2E
+    BackgroundColor #FEFCBF
+    FontColor #744210
+    FontSize 12
+}
+
+skinparam swimlane {
+    BorderColor #4A5568
+    TitleFontColor #1A365D
+    TitleFontSize 15
+    TitleFontStyle bold
+}
+
+title "Diagram Aktivitas (Activity Diagram) - Alur Pelaporan Gangguan oleh Pelanggan"
+
+|#F7FAFC|Pelanggan|
+start
+:Membuka portal layanan pengaduan gangguan;
+:Mengisi formulir pengaduan\n(ID Pelanggan, Nama, Alamat, Jenis Keluhan);
+
+if (Klik "Bagikan Lokasi GPS"?) then (Ya)
+  |#EDF2F7|Sistem Web (Laravel & Livewire)|
+  :Mengambil koordinat (Lat, Lng)\n& mengecek radius akurasi GPS;
+  |Pelanggan|
+else (Tidak)
+  |Sistem Web (Laravel & Livewire)|
+  :Menampilkan Modal Konfirmasi GPS\n("Lokasi GPS Belum Dibagikan");
+  |Pelanggan|
+  if (Pilih "Batal, Isi GPS"?) then (Ya)
+    :Mengklik tombol "Bagikan Lokasi Saya";
+    |Sistem Web (Laravel & Livewire)|
+    :Mengambil koordinat GPS;
+    |Pelanggan|
+  else (Tidak, Tetap Kirim)
+  endif
+endif
+
+:Mengklik tombol "Kirim Laporan Gangguan";
+
+|Sistem Web (Laravel & Livewire)|
+:Memvalidasi kelengkapan data formulir;
+:Menghasilkan Kode Tiket unik\n(Contoh: BRS0001);
+
+|#E2E8F0|Database SBDT (Master - Slave)|
+:Menyimpan data laporan baru ke\nDatabase Utama (db_master - WRITE);
+:Replikasi data otomatis ke Database Cabang\n(db_slave1 & db_slave2 - READ);
+
+|Sistem Web (Laravel & Livewire)|
+:Menampilkan pesan berhasil dan\nKode Tiket kepada Pelanggan;
+
+|Pelanggan|
+:Menerima Kode Tiket untuk melacak\nstatus progres perbaikan;
+stop
+
+@enduml

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="729px" preserveAspectRatio="none" style="width:1113px;height:729px;" version="1.1" viewBox="0 0 1113 729" width="1113px" zoomAndPan="magnify"><defs><filter height="300%" id="ffjddrsxus82" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacingAndGlyphs" textLength="723" x="198" y="16.708">"Diagram Use Case - Sistem Informasi Manajemen Laporan Gangguan (BRS NET)"</text><!--MD5=[b571bcf213a6dba22aad7a8d4311a1bb]
+cluster Sistem Pelaporan Gangguan BRS NET (Laravel & Filament)--><rect fill="#FFFFFF" filter="url(#ffjddrsxus82)" height="615" style="stroke: #4A5568; stroke-width: 1.5;" width="674" x="192" y="103.9531"/><text fill="#1A365D" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="512" x="273" y="120.8047">Sistem Pelaporan Gangguan BRS NET (Laravel &amp; Filament)</text><ellipse cx="336.0782" cy="257.8688" fill="#EBF8FF" filter="url(#ffjddrsxus82)" rx="115.0782" ry="25.4156" style="stroke: #2B6CB0; stroke-width: 1.5;"/><text fill="#1A365D" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="211" x="230.5782" y="261.9352">Mengisi Form Laporan Gangguan</text><ellipse cx="718.6471" cy="350.0826" fill="#EBF8FF" filter="url(#ffjddrsxus82)" rx="111.1471" ry="24.6294" style="stroke: #2B6CB0; stroke-width: 1.5;"/><text fill="#1A365D" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="157" x="640.1471" y="346.8378">Membagikan Lokasi GPS</text><text fill="#1A365D" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="152" x="642.6471" y="361.9706">(Geolocation &amp; Akurasi)</text><ellipse cx="336.1075" cy="423.7746" fill="#EBF8FF" filter="url(#ffjddrsxus82)" rx="117.1075" ry="25.8215" style="stroke: #2B6CB0; stroke-width: 1.5;"/><text fill="#1A365D" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="199" x="236.6075" y="424.2356">Melacak Status Perbaikan Tiket</text><text fill="#1A365D" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="125" x="273.6075" y="439.3684">(Search Kode Tiket)</text><ellipse cx="335.9114" cy="340.8354" fill="#EBF8FF" filter="url(#ffjddrsxus82)" rx="97.4114" ry="21.8823" style="stroke: #2B6CB0; stroke-width: 1.5;"/><text fill="#1A365D" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="173" x="249.4114" y="344.9018">Login &amp; Autentikasi Sistem</text><ellipse cx="335.8874" cy="168.9306" fill="#EBF8FF" filter="url(#ffjddrsxus82)" rx="127.8874" ry="27.9775" style="stroke: #2B6CB0; stroke-width: 1.5;"/><text fill="#1A365D" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="233" x="219.3874" y="171.5643">Mengelola Laporan / Tiket Gangguan</text><text fill="#1A365D" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="131" x="270.3874" y="186.6971">(CRUD &amp; Filter Tiket)</text><ellipse cx="718.7081" cy="262.0947" fill="#EBF8FF" filter="url(#ffjddrsxus82)" rx="131.2081" ry="28.6416" style="stroke: #2B6CB0; stroke-width: 1.5;"/><text fill="#1A365D" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="215" x="611.2081" y="259.7546">Memperbarui Status Penanganan</text><text fill="#1A365D" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="198" x="619.7081" y="274.8874">(Pending -&gt; Proses -&gt; Selesai)</text><ellipse cx="718.5257" cy="170.1583" fill="#EBF8FF" filter="url(#ffjddrsxus82)" rx="131.5257" ry="28.7051" style="stroke: #2B6CB0; stroke-width: 1.5;"/><text fill="#1A365D" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="234" x="601.5257" y="171.1518">Melihat &amp; Navigasi Lokasi Pelanggan</text><text fill="#1A365D" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="166" x="635.5257" y="186.2846">(Google Maps Integration)</text><ellipse cx="336.1483" cy="510.9828" fill="#EBF8FF" filter="url(#ffjddrsxus82)" rx="115.6483" ry="25.5297" style="stroke: #2B6CB0; stroke-width: 1.5;"/><text fill="#1A365D" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="201" x="235.6483" y="512.4384">Mengelola Master Jenis Keluhan</text><text fill="#1A365D" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="102" x="285.1483" y="527.5712">(CRUD Keluhan)</text><ellipse cx="335.7722" cy="595.1076" fill="#EBF8FF" filter="url(#ffjddrsxus82)" rx="103.7722" ry="23.1544" style="stroke: #2B6CB0; stroke-width: 1.5;"/><text fill="#1A365D" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="159" x="256.2722" y="594.3552">Mengelola Master Status</text><text fill="#1A365D" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="93" x="289.2722" y="609.4881">(CRUD Status)</text><ellipse cx="336.1086" cy="677.8748" fill="#EBF8FF" filter="url(#ffjddrsxus82)" rx="110.1086" ry="24.4217" style="stroke: #2B6CB0; stroke-width: 1.5;"/><text fill="#1A365D" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="169" x="251.6086" y="676.3441">Mengelola Akun Pengguna</text><text fill="#1A365D" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="129" x="271.6086" y="691.4769">(User Management)</text><!--MD5=[0bdb5caa96ad5acea78d3ba1ba0ea31d]
+entity Pelanggan--><ellipse cx="75.5" cy="260.4531" fill="#E2E8F0" filter="url(#ffjddrsxus82)" rx="8" ry="8" style="stroke: #1A365D; stroke-width: 1.5;"/><path d="M75.5,268.4531 L75.5,295.4531 M62.5,276.4531 L88.5,276.4531 M75.5,295.4531 L62.5,310.4531 M75.5,295.4531 L88.5,310.4531 " fill="none" filter="url(#ffjddrsxus82)" style="stroke: #1A365D; stroke-width: 1.5;"/><text fill="#1A365D" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="82" x="31" y="328.9482">Pelanggan</text><text fill="#1A365D" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="89" x="31" y="345.2451">(Customer)</text><!--MD5=[97ab183161fd5d1db7fba7485cf76add]
+entity Admin--><ellipse cx="75.5" cy="471.4531" fill="#E2E8F0" filter="url(#ffjddrsxus82)" rx="8" ry="8" style="stroke: #1A365D; stroke-width: 1.5;"/><path d="M75.5,479.4531 L75.5,506.4531 M62.5,487.4531 L88.5,487.4531 M75.5,506.4531 L62.5,521.4531 M75.5,506.4531 L88.5,521.4531 " fill="none" filter="url(#ffjddrsxus82)" style="stroke: #1A365D; stroke-width: 1.5;"/><text fill="#1A365D" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="137" x="7" y="539.9482">Admin / Helpdesk</text><text fill="#1A365D" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="100" x="7" y="556.2451">(Back-office)</text><!--MD5=[c020c9f38010f358c7047a78a6dad27c]
+entity Teknisi--><ellipse cx="75.5" cy="69.4531" fill="#E2E8F0" filter="url(#ffjddrsxus82)" rx="8" ry="8" style="stroke: #1A365D; stroke-width: 1.5;"/><path d="M75.5,77.4531 L75.5,104.4531 M62.5,85.4531 L88.5,85.4531 M75.5,104.4531 L62.5,119.4531 M75.5,104.4531 L88.5,119.4531 " fill="none" filter="url(#ffjddrsxus82)" style="stroke: #1A365D; stroke-width: 1.5;"/><text fill="#1A365D" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="137" x="6" y="137.9482">Teknisi Lapangan</text><text fill="#1A365D" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="139" x="6" y="154.2451">(Field Technician)</text><path d="M913,329.9531 L913,345.9531 L829.86,349.9531 L913,353.9531 L913,370.2188 A0,0 0 0 0 913,370.2188 L1101,370.2188 A0,0 0 0 0 1101,370.2188 L1101,339.9531 L1091,329.9531 L913,329.9531 A0,0 0 0 0 913,329.9531 " fill="#FBFB77" filter="url(#ffjddrsxus82)" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M1091,329.9531 L1091,339.9531 L1101,339.9531 L1091,329.9531 " fill="#FBFB77" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="140" x="919" y="347.02">Muncul konfirmasi jika</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="167" x="919" y="362.1528">lokasi GPS tidak dibagikan</text><!--MD5=[af95bbde5218b72ba2937af3dfff2463]
+link Pelanggan to UC1--><path d="M120.06,292.8731 C152.08,287.6731 196.86,280.3931 237.27,273.8331 " fill="none" id="Pelanggan-&gt;UC1" style="stroke: #2B6CB0; stroke-width: 1.0;"/><polygon fill="#2B6CB0" points="242.68,272.9531,233.1565,270.4424,237.7442,273.752,234.4347,278.3397,242.68,272.9531" style="stroke: #2B6CB0; stroke-width: 1.0;"/><!--MD5=[d1428ad2f055a7334e086feb0d4710f5]
+link Pelanggan to UC3--><path d="M120.19,338.0331 C138.86,352.7731 161.51,368.7631 184,379.9531 C203.89,389.8431 226.38,397.8931 247.82,404.2731 " fill="none" id="Pelanggan-&gt;UC3" style="stroke: #2B6CB0; stroke-width: 1.0;"/><polygon fill="#2B6CB0" points="252.66,405.6931,245.1575,399.3125,247.8639,404.28,242.8964,406.9864,252.66,405.6931" style="stroke: #2B6CB0; stroke-width: 1.0;"/><!--MD5=[1aa3f81a3bd80cff712043234baebedb]
+link UC1 to UC2--><path d="M401.94,278.8631 C430.08,287.5331 463.5,297.3331 494,304.9531 C537.36,315.7831 585.95,325.8131 626.72,333.6431 " fill="none" id="UC1-&gt;UC2" style="stroke: #2B6CB0; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="#2B6CB0" points="631.65,334.5831,623.5679,328.9546,626.7401,333.6384,622.0563,336.8105,631.65,334.5831" style="stroke: #2B6CB0; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="60" x="495.5" y="301.02">«extend»</text><!--MD5=[9c5d918ecfd1c00c01cdb5a4c09a381c]
+link Admin to UC4--><path d="M105.56,461.9431 C124.55,433.9931 151.76,400.5331 184,379.9531 C202.99,367.8331 225.59,359.4631 247.44,353.7031 " fill="none" id="Admin-&gt;UC4" style="stroke: #2B6CB0; stroke-width: 1.0;"/><polygon fill="#2B6CB0" points="252.38,352.4331,242.6727,350.769,247.5335,353.6626,244.6399,358.5234,252.38,352.4331" style="stroke: #2B6CB0; stroke-width: 1.0;"/><!--MD5=[918702f036aedbdc0d9e7427d5dc1819]
+link Admin to UC5--><path d="M102.49,461.9431 C116.42,434.3031 133.12,398.8131 145,365.9531 C168.57,300.7731 136.05,265.0031 184,214.9531 C195.68,202.7531 210.49,193.7731 226.24,187.1431 " fill="none" id="Admin-&gt;UC5" style="stroke: #2B6CB0; stroke-width: 1.0;"/><polygon fill="#2B6CB0" points="231.16,185.1731,221.3181,184.8017,226.5176,187.0301,224.2893,192.2295,231.16,185.1731" style="stroke: #2B6CB0; stroke-width: 1.0;"/><!--MD5=[8e21319948118d853d0cea7b7746d788]
+link Admin to UC8--><path d="M144.08,510.9531 C165.87,510.9531 190.71,510.9531 215.1,510.9531 " fill="none" id="Admin-&gt;UC8" style="stroke: #2B6CB0; stroke-width: 1.0;"/><polygon fill="#2B6CB0" points="220.3,510.9531,211.3,506.9531,215.3,510.9531,211.3,514.9531,220.3,510.9531" style="stroke: #2B6CB0; stroke-width: 1.0;"/><!--MD5=[d1d1ec6c7df7b14772038027612a1c8e]
+link Admin to UC9--><path d="M144.01,539.3331 C157.18,544.4731 170.94,549.5831 184,553.9531 C208.75,562.2331 236.2,570.0731 260.83,576.6431 " fill="none" id="Admin-&gt;UC9" style="stroke: #2B6CB0; stroke-width: 1.0;"/><polygon fill="#2B6CB0" points="265.72,577.9331,258.0352,571.7733,260.8848,576.66,255.9981,579.5096,265.72,577.9331" style="stroke: #2B6CB0; stroke-width: 1.0;"/><!--MD5=[b415004d391d90f899bf2276a07af358]
+link Admin to UC10--><path d="M108.54,560.1031 C127.62,585.8131 153.96,615.8231 184,634.9531 C202.2,646.5431 223.58,655.0731 244.44,661.3331 " fill="none" id="Admin-&gt;UC10" style="stroke: #2B6CB0; stroke-width: 1.0;"/><polygon fill="#2B6CB0" points="249.44,662.7931,241.92,656.4331,244.64,661.3931,239.68,664.1131,249.44,662.7931" style="stroke: #2B6CB0; stroke-width: 1.0;"/><!--MD5=[3ab3c4f0aa88f122bda36575115a204e]
+link UC5 to UC6--><path d="M421.92,189.7131 C482.31,204.4731 563.39,224.2831 625.35,239.4331 " fill="none" id="UC5-&gt;UC6" style="stroke: #2B6CB0; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="#2B6CB0" points="630.53,240.6931,622.7354,234.6729,625.6726,239.5074,620.8381,242.4446,630.53,240.6931" style="stroke: #2B6CB0; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="61" x="495" y="206.02">«include»</text><!--MD5=[cc71c0309851e79daa6bf762f0d3aab0]
+link UC5 to UC7--><path d="M464.23,169.2831 C501.96,169.3831 543.43,169.4931 581.68,169.5931 " fill="none" id="UC5-&gt;UC7" style="stroke: #2B6CB0; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="#2B6CB0" points="586.82,169.6131,577.8315,165.5874,581.82,169.5988,577.8086,173.5874,586.82,169.6131" style="stroke: #2B6CB0; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="61" x="495" y="166.02">«include»</text><!--MD5=[1298ddba4610dc89bb22b7b129d9a032]
+link Teknisi to UC4--><path d="M103.65,157.9831 C134.96,214.4531 182.39,299.7031 184,300.9531 C201.43,314.4731 223.03,323.4431 244.39,329.3831 " fill="none" id="Teknisi-&gt;UC4" style="stroke: #2B6CB0; stroke-width: 1.0;"/><polygon fill="#2B6CB0" points="249.23,330.6831,241.5794,324.4809,244.4019,329.3833,239.4996,332.2058,249.23,330.6831" style="stroke: #2B6CB0; stroke-width: 1.0;"/><!--MD5=[567fc8e7e42e26205543ea27480e0750]
+link Teknisi to UC5--><path d="M145.09,124.8731 C174.91,131.7931 210.29,140.0031 242.39,147.4631 " fill="none" id="Teknisi-&gt;UC5" style="stroke: #2B6CB0; stroke-width: 1.0;"/><polygon fill="#2B6CB0" points="247.51,148.6431,239.645,142.7151,242.639,147.5147,237.8394,150.5087,247.51,148.6431" style="stroke: #2B6CB0; stroke-width: 1.0;"/><!--MD5=[15d8dd31cde0866c274c5fea13ef26d6]
+link Teknisi to UC6--><path d="M145.01,91.5131 C247.44,69.8831 440.87,46.8131 557,144.9531 C583.16,167.0631 562.05,192.4831 587,215.9531 C597.21,225.5531 609.54,233.1731 622.5,239.2031 " fill="none" id="Teknisi-&gt;UC6" style="stroke: #2B6CB0; stroke-width: 1.0;"/><polygon fill="#2B6CB0" points="627.29,241.3631,620.7051,234.0393,622.7251,239.3232,617.4412,241.3432,627.29,241.3631" style="stroke: #2B6CB0; stroke-width: 1.0;"/><!--MD5=[e6fab19cce7bf9ea9fdffb28369ca3f7]
+link Teknisi to UC7--><path d="M145.06,71.5631 C154.87,67.6131 165.02,64.2131 175,61.9531 C340.59,24.4731 394.61,12.4031 557,61.9531 C606.04,76.9131 653.66,112.4331 684.12,138.6731 " fill="none" id="Teknisi-&gt;UC7" style="stroke: #2B6CB0; stroke-width: 1.0;"/><polygon fill="#2B6CB0" points="688.12,142.1531,683.9257,133.242,684.3368,138.8839,678.695,139.2951,688.12,142.1531" style="stroke: #2B6CB0; stroke-width: 1.0;"/><!--MD5=[e642afb2b09315c68339fd9f582c0903]
+@startuml usecase_diagram
+skinparam backgroundColor #FFFFFF
+skinparam handwritten false
+skinparam monochrome false
+skinparam shadowing true
+
+skinparam actor {
+    BorderColor #1A365D
+    BackgroundColor #E2E8F0
+    FontColor #1A365D
+    FontSize 14
+    FontStyle bold
+}
+
+skinparam usecase {
+    BorderColor #2B6CB0
+    BackgroundColor #EBF8FF
+    FontColor #1A365D
+    FontSize 13
+    ArrowColor #2B6CB0
+}
+
+skinparam rectangle {
+    BorderColor #4A5568
+    FontColor #1A365D
+    FontSize 16
+    FontStyle bold
+}
+
+title "Diagram Use Case - Sistem Informasi Manajemen Laporan Gangguan (BRS NET)"
+
+left to right direction
+
+actor "Pelanggan\n(Customer)" as Pelanggan
+actor "Admin / Helpdesk\n(Back-office)" as Admin
+actor "Teknisi Lapangan\n(Field Technician)" as Teknisi
+
+rectangle "Sistem Pelaporan Gangguan BRS NET (Laravel & Filament)" {
+    
+    usecase "Mengisi Form Laporan Gangguan" as UC1
+    usecase "Membagikan Lokasi GPS\n(Geolocation & Akurasi)" as UC2
+    usecase "Melacak Status Perbaikan Tiket\n(Search Kode Tiket)" as UC3
+
+    usecase "Login & Autentikasi Sistem" as UC4
+    usecase "Mengelola Laporan / Tiket Gangguan\n(CRUD & Filter Tiket)" as UC5
+    usecase "Memperbarui Status Penanganan\n(Pending -> Proses -> Selesai)" as UC6
+    usecase "Melihat & Navigasi Lokasi Pelanggan\n(Google Maps Integration)" as UC7
+    usecase "Mengelola Master Jenis Keluhan\n(CRUD Keluhan)" as UC8
+    usecase "Mengelola Master Status\n(CRUD Status)" as UC9
+    usecase "Mengelola Akun Pengguna\n(User Management)" as UC10
+}
+
+Pelanggan - -> UC1
+Pelanggan - -> UC3
+UC1 ..> UC2 : <<extend>>
+note right of UC2
+  Muncul konfirmasi jika
+  lokasi GPS tidak dibagikan
+end note
+
+Admin - -> UC4
+Admin - -> UC5
+Admin - -> UC8
+Admin - -> UC9
+Admin - -> UC10
+
+UC5 ..> UC6 : <<include>>
+UC5 ..> UC7 : <<include>>
+
+Teknisi - -> UC4
+Teknisi - -> UC5
+Teknisi - -> UC6
+Teknisi - -> UC7
+
+@enduml
+
+PlantUML version 1.2020.02(Sun Mar 01 17:22:07 WIB 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 21.0.11+10-1-22.04.2-Ubuntu
+Operating System: Linux
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

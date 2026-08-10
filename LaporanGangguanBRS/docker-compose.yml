@@ -1,0 +1,112 @@
+services:
+
+  # ============================================================
+  # Aplikasi PHP Laravel (Backend)
+  # ============================================================
+  sample:
+    build: ./php
+    image: sample_php:latest
+    container_name: sample
+    hostname: "sample"
+    volumes:
+      - ./src:/var/www/html
+      - ./php/www.conf:/usr/local/etc/php-fpm.d/www.conf
+    working_dir: /var/www/html
+    depends_on:
+      - db_master
+      - db_slave1
+      - db_slave2
+
+  # ============================================================
+  # SBDT - DATABASE UTAMA (MASTER / node tulis)
+  # Seluruh INSERT, UPDATE, DELETE akan diarahkan ke sini oleh Laravel.
+  # Perubahan data di sini akan otomatis direplikasi ke Slave 1 & 2.
+  # ============================================================
+  db_master:
+    image: mariadb:10.2
+    container_name: db_master
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "13306:3306"
+    volumes:
+      - ./db/data:/var/lib/mysql
+      - ./db/conf.d:/etc/mysql/conf.d:ro
+    environment:
+      MYSQL_DATABASE: laravel
+      MYSQL_USER: djambred
+      MYSQL_PASSWORD: p455w0rd1!.
+      MYSQL_ROOT_PASSWORD: p455w0rd
+      TZ: Asia/Jakarta
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+
+  # ============================================================
+  # SBDT - DATABASE CABANG 1 (SLAVE 1 / node baca)
+  # Menyimpan salinan identik dari Master secara real-time.
+  # Laravel mengirim query SELECT (baca) ke sini.
+  # ============================================================
+  db_slave1:
+    image: mariadb:10.2
+    container_name: db_slave1
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "13307:3306"
+    volumes:
+      - ./db_slave1/data:/var/lib/mysql
+      - ./db_slave1/conf.d:/etc/mysql/conf.d:ro
+    environment:
+      MYSQL_DATABASE: laravel
+      MYSQL_USER: djambred
+      MYSQL_PASSWORD: p455w0rd1!.
+      MYSQL_ROOT_PASSWORD: p455w0rd
+      TZ: Asia/Jakarta
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql_slave1
+    depends_on:
+      - db_master
+
+  # ============================================================
+  # SBDT - DATABASE CABANG 2 (SLAVE 2 / node baca)
+  # Salinan identik kedua dari Master.
+  # Laravel dapat menggunakan Slave 2 sebagai failover / load balancing baca.
+  # ============================================================
+  db_slave2:
+    image: mariadb:10.2
+    container_name: db_slave2
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "13308:3306"
+    volumes:
+      - ./db_slave2/data:/var/lib/mysql
+      - ./db_slave2/conf.d:/etc/mysql/conf.d:ro
+    environment:
+      MYSQL_DATABASE: laravel
+      MYSQL_USER: djambred
+      MYSQL_PASSWORD: p455w0rd1!.
+      MYSQL_ROOT_PASSWORD: p455w0rd
+      TZ: Asia/Jakarta
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql_slave2
+    depends_on:
+      - db_master
+
+  # ============================================================
+  # Web Server Nginx
+  # ============================================================
+  nginx_sample:
+    build: ./nginx
+    image: nginx_sample:latest
+    container_name: nginx_sample
+    hostname: "nginx_sample"
+    ports:
+      - "80:80"
+    volumes:
+      - ./src:/var/www/html
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - sample
+
+      

@@ -1,0 +1,82 @@
+@startuml activity_diagram_penanganan
+skinparam backgroundColor #FFFFFF
+skinparam handwritten false
+skinparam monochrome false
+skinparam shadowing true
+
+skinparam activity {
+    BorderColor #2B6CB0
+    BackgroundColor #EBF8FF
+    FontColor #1A365D
+    FontSize 13
+    ArrowColor #2B6CB0
+}
+
+skinparam activityDiamond {
+    BorderColor #D69E2E
+    BackgroundColor #FEFCBF
+    FontColor #744210
+    FontSize 12
+}
+
+skinparam swimlane {
+    BorderColor #4A5568
+    TitleFontColor #1A365D
+    TitleFontSize 15
+    TitleFontStyle bold
+}
+
+title "Diagram Aktivitas (Activity Diagram) - Alur Penanganan & Pembaruan Status Gangguan"
+
+|#F7FAFC|Admin / Teknisi|
+start
+:Login ke Filament Admin Panel;
+
+|#EDF2F7|Sistem Web (Filament)|
+if (Validasi Kredensial?) then (Gagal)
+  :Menampilkan pesan error login;
+  stop
+else (Sukses)
+  :Menampilkan Dashboard Admin Panel;
+endif
+
+|Admin / Teknisi|
+:Membuka halaman Daftar Tiket Gangguan;
+
+|#E2E8F0|Database SBDT (Master - Slave)|
+:Mengambil data daftar tiket dari\nDatabase Cabang (db_slave1/db_slave2 - READ);
+
+|Sistem Web (Filament)|
+:Menampilkan tabel daftar tiket pelanggan;
+
+|Admin / Teknisi|
+:Memeriksa detail tiket & mengklik\ntautan navigasi koordinat GPS;
+
+|Sistem Web (Filament)|
+:Membuka rute navigasi Google Maps\nmenuju titik lokasi rumah pelanggan;
+
+|Admin / Teknisi|
+:Teknisi menuju lokasi pelanggan &\nmelakukan perbaikan fisik jaringan;
+:Memperbarui status penanganan tiket\n(Pending ➔ Sedang Diproses ➔ Selesai);
+
+|Sistem Web (Filament)|
+:Mengirim permintaan update status;
+
+|Database SBDT (Master - Slave)|
+:Menyimpan status baru ke Database\nUtama (db_master - WRITE);
+:Replikasi status terbaru ke Database\nCabang (db_slave1 & db_slave2 - READ);
+
+|#F0FFF4|Pelanggan|
+:Memasukkan Kode Tiket pada fitur\n"Cek Status Perbaikan" di web;
+
+|Database SBDT (Master - Slave)|
+:Membaca status terkini dari Database\nCabang (db_slave1/db_slave2 - READ);
+
+|Sistem Web (Filament)|
+:Menampilkan status perbaikan terbaru\n(Sedang Diproses / Selesai) kepada Pelanggan;
+
+|Pelanggan|
+:Melihat progres atau konfirmasi bahwa\ngangguan jaringan telah selesai diperbaiki;
+stop
+
+@enduml

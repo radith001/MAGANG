@@ -1,0 +1,137 @@
+@startuml class_diagram
+skinparam backgroundColor #FFFFFF
+skinparam handwritten false
+skinparam monochrome false
+skinparam shadowing true
+
+skinparam class {
+    BorderColor #2B6CB0
+    BackgroundColor #EBF8FF
+    FontColor #1A365D
+    FontSize 13
+    AttributeFontColor #2D3748
+    AttributeFontSize 11
+    MethodFontColor #1A365D
+    MethodFontSize 11
+    HeaderBackgroundColor #BEE3F8
+    ArrowColor #2B6CB0
+}
+
+skinparam package {
+    BorderColor #4A5568
+    FontColor #1A365D
+    FontSize 14
+    FontStyle bold
+    BackgroundColor #F7FAFC
+}
+
+title "Diagram Kelas (Class Diagram) - Sistem Informasi Laporan Gangguan BRS NET"
+
+package "Domain Models (Eloquent ORM)" {
+    
+    class "NamaPelanggan\n(Tiket Pengaduan)" as NamaPelanggan {
+        - id: BigInteger <<PK>>
+        - kode_ticket: String <<Unique>>
+        - nama_pelanggan: String
+        - alamat: Text
+        - keluhan_id: BigInteger <<FK>>
+        - status_id: BigInteger <<FK>>
+        - latitude: Decimal(10,8)
+        - longitude: Decimal(11,8)
+        - google_maps_link: String
+        - created_at: Timestamp
+        - updated_at: Timestamp
+        --
+        + static booted(): void
+        + status(): BelongsTo
+        + keluhan(): BelongsTo
+    }
+
+    class "Keluhan\n(Master Gangguan)" as Keluhan {
+        - id: BigInteger <<PK>>
+        - nama_keluhan: String
+        - created_at: Timestamp
+        - updated_at: Timestamp
+        --
+        + namaPelanggans(): HasMany
+    }
+
+    class "Status\n(Master Status)" as Status {
+        - id: BigInteger <<PK>>
+        - nama_status: String
+        - created_at: Timestamp
+        - updated_at: Timestamp
+        --
+        + namaPelanggans(): HasMany
+    }
+
+    class "User\n(Admin & Teknisi)" as User {
+        - id: BigInteger <<PK>>
+        - name: String
+        - email: String <<Unique>>
+        - password: String
+        - avatar_url: String
+        - remember_token: String
+        - created_at: Timestamp
+        - updated_at: Timestamp
+        --
+        + getFilamentAvatarUrl(): String
+        + canAccessPanel(Panel): Boolean
+        + hasRole(Roles): Boolean
+    }
+}
+
+package "Presentation & Control Layer (Livewire & Filament)" {
+    
+    class "Livewire\\Home\n(Portal Publik)" as LivewireHome {
+        + nama_pelanggan: String
+        + keluhan_id: Integer
+        + alamat: String
+        + latitude: Float
+        + longitude: Float
+        + ticket_code: String
+        --
+        + saveComplaint(): void
+        + searchTicket(): void
+        + render(): View
+    }
+
+    class "Filament\\NamaPelangganResource\n(Manajemen Tiket)" as NamaPelangganResource {
+        + static form(Form): Form
+        + static table(Table): Table
+        + static getPages(): Array
+    }
+
+    class "Filament\\KeluhanResource\n(Manajemen Keluhan)" as KeluhanResource {
+        + static form(Form): Form
+        + static table(Table): Table
+    }
+
+    class "Filament\\StatusResource\n(Manajemen Status)" as StatusResource {
+        + static form(Form): Form
+        + static table(Table): Table
+    }
+}
+
+' --- RELASI ORM (MULTIPLICITY) ---
+Keluhan "1" <-- "0..*" NamaPelanggan : "memiliki < (keluhan_id)"
+Status "1" <-- "0..*" NamaPelanggan : "memiliki < (status_id)"
+
+' --- RELASI CONTROLLER KE MODEL ---
+LivewireHome ..> NamaPelanggan : "creates / reads"
+LivewireHome ..> Keluhan : "reads"
+LivewireHome ..> Status : "reads"
+
+NamaPelangganResource ..> NamaPelanggan : "manages (CRUD)"
+KeluhanResource ..> Keluhan : "manages (CRUD)"
+StatusResource ..> Status : "manages (CRUD)"
+
+note right of NamaPelanggan
+  <b>SBDT Architecture:</b>
+  - Write/Insert ➔ db_master
+  - Read/Select ➔ db_slave1 / db_slave2
+  - Otomatis generate kode_ticket
+    pada method booted()
+end note
+
+@enduml
